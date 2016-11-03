@@ -7,7 +7,7 @@ namespace Sandbox
 {
     class StudentInfo
     {
-        private Dictionary<int, Student> students;
+        private Dictionary<int, Student> students; //returns the class
 
         public StudentInfo()
         {
@@ -17,14 +17,16 @@ namespace Sandbox
         // Return the number of students in the group of students
         public int GetStudentCount()
         {
+
             // The below must be changed
-            return 0;
+            int antal = students.Count;
+            return antal;
         }
 
         // Add a single student to the group of students
         public void AddStudent(int id, Student aStudent)
         {
-            // Add code here
+            students.Add(id, aStudent);
         }
 
         // Given an id, return the student with that id.
@@ -32,6 +34,10 @@ namespace Sandbox
         public Student GetStudent(int id)
         {
             // The below must be changed
+            if (students.ContainsKey(id))
+            {
+                return students[id];
+            }
             return null;
         }
 
@@ -39,7 +45,13 @@ namespace Sandbox
         // If no student exists with the given id, return 0 (zero).
         public int GetAverageForStudent(int id)
         {
+
             // The below must be changed
+
+            if (students.ContainsKey(id))
+            {
+                return students[id].GetScoreAverage();
+            }
             return 0;
         }
 

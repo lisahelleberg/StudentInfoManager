@@ -10,6 +10,8 @@ namespace Sandbox
 
             StudentInfo sInfo = new StudentInfo();
 
+            
+
             Student anna = new Student(12, "Anna");
             Student betty = new Student(338, "Betty");
             Student carl = new Student(92, "Carl");
@@ -33,7 +35,7 @@ namespace Sandbox
             sInfo.AddStudent(betty.GetID(), betty);
             sInfo.AddStudent(carl.GetID(), carl);
 
-            // Does the output match what you expect...?
+            //// Does the output match what you expect...?
             Console.WriteLine(sInfo.GetStudentCount());
             Console.WriteLine(sInfo.GetStudent(12).GetName());
             Console.WriteLine(sInfo.GetStudent(338).GetName());
@@ -44,7 +46,7 @@ namespace Sandbox
             Console.WriteLine(sInfo.GetAverageForStudent(120));
             Console.WriteLine(sInfo.GetTotalAverage());
 
-            // The LAST line of code should be ABOVE this line
+            //// The LAST line of code should be ABOVE this line
         }
     }
 }

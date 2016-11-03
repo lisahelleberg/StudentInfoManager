@@ -9,7 +9,7 @@ namespace Sandbox
     {
         private int studentID;
         private String name;
-        private Dictionary<String, int> testScores;
+        private Dictionary<String, int> testScores; //Key word
 
         // When a Student is created, the id and name are given,
         // and will not change.
