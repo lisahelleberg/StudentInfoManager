@@ -36,15 +36,14 @@ namespace Sandbox
             sInfo.AddStudent(carl.GetID(), carl);
 
             //// Does the output match what you expect...?
-            Console.WriteLine(sInfo.GetStudentCount());
-            Console.WriteLine(sInfo.GetStudent(12).GetName());
-            Console.WriteLine(sInfo.GetStudent(338).GetName());
-            Console.WriteLine(sInfo.GetStudent(92).GetName());
-            Console.WriteLine(sInfo.GetAverageForStudent(12));
-            Console.WriteLine(sInfo.GetAverageForStudent(338));
-            Console.WriteLine(sInfo.GetAverageForStudent(92));
-            Console.WriteLine(sInfo.GetAverageForStudent(120));
-            Console.WriteLine(sInfo.GetTotalAverage());
+            Console.WriteLine($"There is {sInfo.GetStudentCount()} students");
+            Console.WriteLine($"Name: {sInfo.GetStudent(12).GetName()}");
+            Console.WriteLine($"Name: {sInfo.GetStudent(338).GetName()}");
+            Console.WriteLine($"Name: {sInfo.GetStudent(92).GetName()}");
+            Console.WriteLine($"The test average for {sInfo.GetStudent(12).GetName()} is {sInfo.GetAverageForStudent(12)}");
+            Console.WriteLine($"The test average for {sInfo.GetStudent(338).GetName()} is {sInfo.GetAverageForStudent(338)}");
+            Console.WriteLine($"The test average for {sInfo.GetStudent(92).GetName()} is {sInfo.GetAverageForStudent(92)}");
+            Console.WriteLine($"The total test average is: {sInfo.GetTotalAverage()}");
 
             //// The LAST line of code should be ABOVE this line
         }
